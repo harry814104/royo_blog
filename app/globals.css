@@ -1,26 +1,260 @@
 @import "tailwindcss";
 
+/* Nordic / Scandinavian design tokens */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --sc-cream: #f5f0e6;
+  --sc-cream-2: #ece5d4;
+  --sc-paper: #fdfbf5;
+  --sc-wood: #c89e69;
+  --sc-wood-dark: #9c764a;
+  --sc-fg: #2c2a26;
+  --sc-fg-soft: #5a564d;
+  --sc-fg-mute: #8a8478;
+  --sc-stone: #cfc8b9;
+  --sc-forest: #3e574b;
+  --sc-deep: #1f3b4d;
+  --sc-accent: #c44e3c;
+
+  --sc-line: rgba(44, 42, 38, 0.08);
+  --shadow-soft: 0 2px 8px rgba(44, 42, 38, 0.05), 0 8px 32px rgba(44, 42, 38, 0.06);
+
+  --radius-sm: 8px;
+  --radius-md: 16px;
+  --radius-lg: 28px;
+  --radius-pill: 999px;
+
+  /* bottom dock — A (light): forest pill + cream icons, wood active */
+  --dock-bg: rgba(62, 87, 75, 0.94);
+  --dock-icon: #f5f0e6;
+  --dock-icon-hover: rgba(255, 255, 255, 0.12);
+  --dock-active-bg: #e8dcc4;
+  --dock-active-icon: #3e574b;
+  --dock-shadow: 0 8px 32px rgba(44, 42, 38, 0.18);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+/* ── dark theme tokens ──────────────────────────────
+   applied when: html.dark (manual) OR system-dark with no manual choice.
+   dock follows variant C (dark pill + stone icons, wood active). */
+:root.dark {
+  --sc-cream: #14181a;
+  --sc-cream-2: #1c2123;
+  --sc-paper: #21272a;
+  --sc-wood: #c89e69;
+  --sc-wood-dark: #b6895a;
+  --sc-fg: #e9e4d7;
+  --sc-fg-soft: #aaa496;
+  --sc-fg-mute: #79746a;
+  --sc-stone: #353a39;
+  --sc-forest: #6f9684;
+  --sc-deep: #284b60;
+  --sc-accent: #d4604e;
+
+  --sc-line: rgba(245, 240, 230, 0.1);
+  --shadow-soft: 0 2px 8px rgba(0, 0, 0, 0.25), 0 8px 32px rgba(0, 0, 0, 0.35);
+
+  --dock-bg: rgba(31, 38, 34, 0.95);
+  --dock-icon: #cfc8b9;
+  --dock-icon-hover: rgba(255, 255, 255, 0.08);
+  --dock-active-bg: #c89e69;
+  --dock-active-icon: #1f1f1c;
+  --dock-shadow: 0 10px 36px rgba(0, 0, 0, 0.45);
 }
 
 @media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  :root:not(.light):not(.dark) {
+    --sc-cream: #14181a;
+    --sc-cream-2: #1c2123;
+    --sc-paper: #21272a;
+    --sc-wood: #c89e69;
+    --sc-wood-dark: #b6895a;
+    --sc-fg: #e9e4d7;
+    --sc-fg-soft: #aaa496;
+    --sc-fg-mute: #79746a;
+    --sc-stone: #353a39;
+    --sc-forest: #6f9684;
+    --sc-deep: #284b60;
+    --sc-accent: #d4604e;
+
+    --sc-line: rgba(245, 240, 230, 0.1);
+    --shadow-soft: 0 2px 8px rgba(0, 0, 0, 0.25), 0 8px 32px rgba(0, 0, 0, 0.35);
+
+    --dock-bg: rgba(31, 38, 34, 0.95);
+    --dock-icon: #cfc8b9;
+    --dock-icon-hover: rgba(255, 255, 255, 0.08);
+    --dock-active-bg: #c89e69;
+    --dock-active-icon: #1f1f1c;
+    --dock-shadow: 0 10px 36px rgba(0, 0, 0, 0.45);
   }
 }
 
+@theme inline {
+  --color-cream: var(--sc-cream);
+  --color-cream-2: var(--sc-cream-2);
+  --color-paper: var(--sc-paper);
+  --color-wood: var(--sc-wood);
+  --color-wood-dark: var(--sc-wood-dark);
+  --color-ink: var(--sc-fg);
+  --color-ink-soft: var(--sc-fg-soft);
+  --color-ink-mute: var(--sc-fg-mute);
+  --color-stone: var(--sc-stone);
+  --color-forest: var(--sc-forest);
+  --color-deep: var(--sc-deep);
+  --color-brick: var(--sc-accent);
+
+  --font-sans: var(--font-noto-tc), "PingFang TC", system-ui, sans-serif;
+  --font-mono: var(--font-jetbrains), "SF Mono", monospace;
+}
+
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--sc-cream);
+  color: var(--sc-fg);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  letter-spacing: 0.01em;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+html {
+  -webkit-text-size-adjust: 100%; /* 手機不自動放大字級 */
+  scroll-behavior: smooth;
+}
+
+/* 觸控:移除點擊高亮、避免文字被選取干擾滑動 */
+a,
+button {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* ── 換頁進場轉場(app/template.tsx 每次導航重新掛載觸發) ── */
+@keyframes page-enter {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.page-enter {
+  animation: page-enter 0.34s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .page-enter {
+    animation: none;
+  }
+  body,
+  .site-header,
+  .dock {
+    transition: none;
+  }
+}
+
+.nordic-card {
+  background: var(--sc-paper);
+  border: 1px solid var(--sc-line);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-soft);
+}
+
+.overline {
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--sc-fg-mute);
+}
+
+/* ── top floating header (scroll-aware) ────────────── */
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 50;
+  padding-top: env(safe-area-inset-top);
+  background: color-mix(in srgb, var(--sc-cream) 70%, transparent);
+  border-bottom: 1px solid transparent;
+  -webkit-backdrop-filter: saturate(1.4) blur(10px);
+  backdrop-filter: saturate(1.4) blur(10px);
+  transition: transform 0.34s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+.site-header[data-hidden="true"] {
+  transform: translateY(-100%);
+}
+
+/* ── bottom floating dock (scroll-aware) ───────────── */
+.dock {
+  position: fixed;
+  left: 50%;
+  bottom: calc(20px + env(safe-area-inset-bottom));
+  transform: translateX(-50%);
+  max-width: calc(100vw - 24px);
+  display: flex;
+  gap: 6px;
+  padding: 8px 10px;
+  border-radius: var(--radius-pill);
+  background: var(--dock-bg);
+  box-shadow: var(--dock-shadow);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  z-index: 60;
+  transition: transform 0.34s cubic-bezier(0.22, 0.61, 0.36, 1),
+    opacity 0.3s ease;
+}
+
+.dock[data-hidden="true"] {
+  transform: translateX(-50%) translateY(180%);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.dock-link {
+  position: relative;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  color: var(--dock-icon);
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.dock-link:hover {
+  background: var(--dock-icon-hover);
+}
+
+.dock-link[data-active="true"],
+.dock-link[data-active="true"]:hover {
+  background: var(--dock-active-bg);
+  color: var(--dock-active-icon);
+}
+
+.dock-tip {
+  position: absolute;
+  bottom: 54px;
+  left: 50%;
+  transform: translateX(-50%) translateY(4px);
+  white-space: nowrap;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  padding: 4px 10px;
+  border-radius: var(--radius-pill);
+  background: var(--sc-fg);
+  color: var(--sc-cream);
+  box-shadow: var(--shadow-soft);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.15s ease, transform 0.15s ease;
+}
+
+.dock-link:hover .dock-tip {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
 }
