@@ -5,7 +5,7 @@ import Header from "@/components/Header";
 import Dock from "@/components/Dock";
 import Footer from "@/components/Footer";
 
-const themeScript = `(function(){try{var t=localStorage.getItem('theme');var d=document.documentElement;if(t==='dark'){d.classList.add('dark')}else if(t==='light'){d.classList.add('light')}}catch(e){}})();`;
+const themeScript = `(function(){try{var d=document.documentElement;var t=localStorage.getItem('theme');if(t==='dark'){d.classList.add('dark')}else{d.classList.add('light')}}catch(e){document.documentElement.classList.add('light')}})();`;
 
 const notoTC = Noto_Sans_TC({
   variable: "--font-noto-tc",
