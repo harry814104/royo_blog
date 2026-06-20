@@ -134,13 +134,20 @@ export const okayamaKobeOsaka: Journey = {
         "早上到天保山港灣村探訪大阪海遊館,中午殺到日本橋電電街當一日宅宅,下午轉戰梅田阪急三番街朝聖 hololive,晚上回道頓堀。",
       lodging: "Cross Hotel Osaka(心齋橋)",
       route: {
-        stops: ["大阪海遊館 / 天保山", "日本橋電電街", "阪急三番街 hololive 梅田店", "道頓堀"],
+        stops: [
+          "大阪海遊館 / 天保山",
+          "日本橋電電街",
+          "Fandom Namba公式",
+          "阪急三番街 hololive 梅田店",
+          "道頓堀",
+        ],
         mapUrl:
           "https://www.google.com/maps/dir/Osaka+Aquarium+Kaiyukan/Nipponbashi+Denden+Town/Hankyu+Sanbangai+Hololive+Shop/Dotonbori/",
       },
       points: [
         { name: "大阪海遊館", lat: 34.6547, lng: 135.4292, kind: "spot" },
         { name: "日本橋電電街", lat: 34.6614, lng: 135.506, kind: "spot" },
+        { name: "Fandom Namba公式", lat: 34.6605, lng: 135.5063, kind: "spot" },
         { name: "hololive 大阪梅田店", lat: 34.7048, lng: 135.4983, kind: "spot" },
         { name: "道頓堀", lat: 34.6687, lng: 135.5013, kind: "food" },
       ],
@@ -186,6 +193,17 @@ export const okayamaKobeOsaka: Journey = {
               },
             },
             {
+              type: "spot",
+              spot: {
+                no: "03",
+                name: "Fandom Namba公式",
+                desc: "電電街內的動畫/動漫周邊商品店,位於日本橋4丁目,跟電電街主逛區走路就能到,順路晃進去挖寶就好,不必特別排時間。",
+                meta: ["📍 日本橋4丁目", "🎴 動漫周邊商品"],
+                mapUrl:
+                  "https://www.google.com/maps/place/?q=Fandom+Namba+大阪市浪速区日本橋4",
+              },
+            },
+            {
               type: "transport",
               note: {
                 mode: "地鐵",
@@ -195,7 +213,7 @@ export const okayamaKobeOsaka: Journey = {
             {
               type: "spot",
               spot: {
-                no: "03",
+                no: "04",
                 name: "hololive 大阪梅田店(阪急三番街北館 B1F)",
                 time: "16:00–17:30",
                 desc: "關西第一家 hololive 官方實體店。單筆 ¥3,300 以上送特典明信片。店面不好找,建議用 Google Map 設「Kiddy Land 大阪梅田店」導航。",
@@ -217,7 +235,7 @@ export const okayamaKobeOsaka: Journey = {
             {
               type: "spot",
               spot: {
-                no: "04",
+                no: "05",
                 name: "道頓堀美食巡禮 + 心齋橋夜逛",
                 time: "18:00–22:00",
                 desc: "把昨天沒吃到的章魚燒、串炸、神戶牛壽司一次嘗試,逛完再到心齋橋藥妝補貨。",
@@ -255,19 +273,19 @@ export const okayamaKobeOsaka: Journey = {
       date: "2026.10.20 · 二",
       title: "奈良一日遊 · 神之鹿與千年古寺",
       summary:
-        "從難波搭近鐵直達奈良,東大寺、奈良公園、春日大社三大景點一日制霸,傍晚回大阪享用最後一晚。",
+        "從難波搭近鐵直達奈良,東大寺、奈良公園、春日大社三大景點一日制霸,傍晚回大阪改去梅田空中庭園展望台看夜景收尾。",
       lodging: "Cross Hotel Osaka(心齋橋)",
       route: {
-        stops: ["大阪難波", "近鐵奈良駅", "奈良公園", "東大寺", "春日大社", "黑門市場"],
+        stops: ["大阪難波", "近鐵奈良駅", "奈良公園", "東大寺", "春日大社", "梅田スカイビル"],
         mapUrl:
-          "https://www.google.com/maps/dir/Kintetsu+Nara+Station/Nara+Park/Todai-ji+Temple/Kasuga+Taisha+Shrine/Kuromon+Market/",
+          "https://www.google.com/maps/dir/Kintetsu+Nara+Station/Nara+Park/Todai-ji+Temple/Kasuga+Taisha+Shrine/Umeda+Sky+Building/",
       },
       points: [
         { name: "近鐵奈良駅", lat: 34.6829, lng: 135.83, kind: "transit" },
         { name: "奈良公園", lat: 34.6851, lng: 135.843, kind: "spot" },
         { name: "東大寺", lat: 34.689, lng: 135.8398, kind: "spot" },
         { name: "春日大社", lat: 34.6818, lng: 135.8483, kind: "spot" },
-        { name: "黑門市場", lat: 34.6657, lng: 135.5061, kind: "food" },
+        { name: "梅田スカイビル", lat: 34.7053, lng: 135.4905, kind: "spot" },
       ],
       blocks: [
         {
@@ -342,18 +360,25 @@ export const okayamaKobeOsaka: Journey = {
         },
         {
           period: "evening",
-          label: "晚上 · Last Night in Osaka",
+          label: "晚上 · Umeda Sky Night View",
           items: [
+            {
+              type: "transport",
+              note: {
+                mode: "地鐵",
+                text: "「難波駅 → 梅田駅」｜御堂筋線直達｜約 10 分鐘｜¥280。出站後步行約 12 分鐘可達,或從 JR 大阪駅中央口搭免費接駁巴士約 10 分。",
+              },
+            },
             {
               type: "spot",
               spot: {
                 no: "04",
-                name: "黑門市場 + 千日前道具街",
-                time: "18:30–21:30",
-                desc: "傍晚有海鮮丼、神戶牛串、烤帝王蟹腳的攤位開到 18 點。收攤就轉戰千日前道具街,職人刀具、和食器值得帶回家。",
-                meta: ["⏰ 黑門市場 09:00–18:00"],
+                name: "梅田スカイビル 空中庭園展望台",
+                time: "18:30–20:30",
+                desc: "兩棟 173 公尺高樓由圓形手扶梯連接於頂端,曾被選為世界最美展望台之一。日落後可 360 度俯瞰大阪盆地萬家燈火,天氣好時遠眺明石海峽大橋。",
+                meta: ["🎟 展望台 ¥1,500", "⏰ 09:30–22:30(最終入場 22:00)", "📸 環形手扶梯 + 360 度夜景"],
                 mapUrl:
-                  "https://www.google.com/maps/place/?q=place_id:ChIJXSJB5UHnAGARQcEjvngsHaw",
+                  "https://www.google.com/maps/place/?q=梅田スカイビル+空中庭園展望台",
               },
             },
           ],
@@ -369,9 +394,9 @@ export const okayamaKobeOsaka: Journey = {
               prices: ["¥1,800–2,500／人", "⏰ 11:00–15:00 (週二休)"],
             },
             {
-              name: "[晚餐] 黑門三平海鮮丼",
-              desc: "黑門市場內最人氣的海鮮丼,鮭魚、鮪魚大腹、海膽堆滿一碗,¥2,000 起 CP 值極高。",
-              prices: ["¥2,000–3,500／人"],
+              name: "[晚餐] 滝見小路(梅田スカイビル B1)",
+              desc: "重現昭和 30 年代懷舊街景的美食街,集合大阪燒、串炸、立食蕎麥麵等多家老店。看完夜景下樓就能解決晚餐,不必再移動。",
+              prices: ["¥1,500–3,000／人"],
             },
           ],
         },
@@ -755,14 +780,14 @@ export const okayamaKobeOsaka: Journey = {
   budget: [
     { date: "10/18 Day 1", transport: "¥14,500", tickets: "¥0", food: "¥5,000", lodging: "¥18,000", total: "¥37,500" },
     { date: "10/19 Day 2", transport: "¥1,800", tickets: "¥4,100", food: "¥7,000", lodging: "¥18,000", total: "¥30,900" },
-    { date: "10/20 Day 3", transport: "¥3,600", tickets: "¥3,000", food: "¥7,500", lodging: "¥18,000", total: "¥32,100" },
+    { date: "10/20 Day 3", transport: "¥4,200", tickets: "¥4,500", food: "¥7,500", lodging: "¥18,000", total: "¥34,200" },
     { date: "10/21 Day 4", transport: "¥2,500", tickets: "¥6,000", food: "¥20,000", lodging: "¥22,000", total: "¥50,500" },
     { date: "10/22 Day 5", transport: "¥9,000", tickets: "¥1,400", food: "¥6,000", lodging: "¥14,000", total: "¥30,400" },
     { date: "10/23 Day 6", transport: "¥2,300", tickets: "¥1,300", food: "¥4,000", lodging: "—", total: "¥7,600" },
-    { date: "合計", transport: "¥33,700", tickets: "¥15,800", food: "¥49,500", lodging: "¥90,000", total: "¥189,000", isTotal: true },
+    { date: "合計", transport: "¥34,300", tickets: "¥17,300", food: "¥49,500", lodging: "¥90,000", total: "¥191,100", isTotal: true },
   ],
   budgetNote:
-    "約合台幣 NT$ 42,100(2人合計)／每人 NT$ 21,050。匯率以 ¥1 ≈ NT$ 0.223 計算。未含機票、購物、周邊與伴手禮(建議再保留 NT$ 10,000–20,000／人)。",
+    "約合台幣 NT$ 42,600(2人合計)／每人 NT$ 21,300。匯率以 ¥1 ≈ NT$ 0.223 計算。未含機票、購物、周邊與伴手禮(建議再保留 NT$ 10,000–20,000／人)。",
   tips: [
     {
       title: "交通票券建議",
