@@ -129,76 +129,56 @@ export const okayamaKobeOsaka: Journey = {
     {
       day: 2,
       date: "2026.10.19 · 一",
-      title: "大阪文化 × 御宅天堂日",
+      title: "大阪海港 × 御宅天堂日",
       summary:
-        "早上拜訪大阪城,中午衝梅田阪急三番街朝聖 hololive,下午殺到日本橋電電街當一日宅宅,晚上回道頓堀。",
+        "早上到天保山港灣村探訪大阪海遊館,中午殺到日本橋電電街當一日宅宅,下午轉戰梅田阪急三番街朝聖 hololive,晚上回道頓堀。",
       lodging: "Cross Hotel Osaka(心齋橋)",
       route: {
-        stops: ["大阪城", "阪急三番街 hololive 梅田店", "日本橋電電街", "道頓堀"],
+        stops: ["大阪海遊館 / 天保山", "日本橋電電街", "阪急三番街 hololive 梅田店", "道頓堀"],
         mapUrl:
-          "https://www.google.com/maps/dir/Osaka+Castle/Hankyu+Sanbangai+Hololive+Shop/Nipponbashi+Denden+Town/Dotonbori/",
+          "https://www.google.com/maps/dir/Osaka+Aquarium+Kaiyukan/Nipponbashi+Denden+Town/Hankyu+Sanbangai+Hololive+Shop/Dotonbori/",
       },
       points: [
-        { name: "大阪城", lat: 34.6873, lng: 135.5259, kind: "spot" },
-        { name: "hololive 大阪梅田店", lat: 34.7048, lng: 135.4983, kind: "spot" },
+        { name: "大阪海遊館", lat: 34.6547, lng: 135.4292, kind: "spot" },
         { name: "日本橋電電街", lat: 34.6614, lng: 135.506, kind: "spot" },
+        { name: "hololive 大阪梅田店", lat: 34.7048, lng: 135.4983, kind: "spot" },
         { name: "道頓堀", lat: 34.6687, lng: 135.5013, kind: "food" },
       ],
       blocks: [
         {
           period: "morning",
-          label: "早上 · Morning at the Castle",
+          label: "早上 · Morning at Tempozan",
           items: [
             {
               type: "spot",
               spot: {
                 no: "01",
-                name: "大阪城公園 & 天守閣",
-                time: "09:00–11:30",
-                desc: "豐臣秀吉建造的天下名城,金色虎紋裝飾配翡翠瓦頂超氣派。10 月公園銀杏與楓葉開始轉色,西の丸庭園角度最美。",
-                meta: ["🎟 天守閣 ¥600", "⏱ 建議停留 2.5 小時", "📸 護城河 + 天守閣"],
-                mapUrl:
-                  "https://www.google.com/maps/place/?q=place_id:ChIJ_TooXM3gAGARQR6hXH3QAQ8",
+                name: "大阪海遊館 & 天保山港灣村",
+                time: "10:00–12:00",
+                desc: "世界級水族館,8 層樓高的環形水槽從太平洋表層一路深潛到深海,鎮館之寶是巨大鯨鯊。隔壁天保山港灣村有大觀覽車,可遠眺大阪灣與明石海峽大橋。",
+                meta: ["🎟 海遊館 ¥2,700", "🎡 天保山大觀覽車 ¥800", "⏱ 建議停留 2 小時", "🐋 鎮館之寶:鯨鯊"],
+                mapUrl: "https://www.google.com/maps/place/?q=大阪海遊館",
               },
             },
             {
               type: "transport",
               note: {
                 mode: "地鐵",
-                text: "「天滿橋站 → 梅田站」｜谷町線轉御堂筋線｜約 15 分鐘｜¥240。",
+                text: "「大阪港駅 → 日本橋駅」｜大阪Metro中央線轉堺筋線(本町站轉乘)｜約 30 分鐘｜¥350。",
               },
             },
           ],
         },
         {
           period: "afternoon",
-          label: "下午 · Hololive Pilgrimage",
+          label: "下午 · DenDen Town to Hololive Pilgrimage",
           items: [
             {
               type: "spot",
               spot: {
                 no: "02",
-                name: "hololive 大阪梅田店(阪急三番街北館 B1F)",
-                time: "12:30–14:00",
-                desc: "關西第一家 hololive 官方實體店。單筆 ¥3,300 以上送特典明信片。店面不好找,建議用 Google Map 設「Kiddy Land 大阪梅田店」導航。",
-                meta: ["⏰ 10:00–21:00", "⏱ 建議停留 30–60 分", "💴 預算 ¥5,000–15,000"],
-                mapUrl:
-                  "https://www.google.com/maps/place/?q=place_id:ChIJFegzXQDnAGARVHywk-VqQe0",
-              },
-            },
-            {
-              type: "transport",
-              note: {
-                mode: "地鐵",
-                text: "「梅田站 → 惠美須町站」｜御堂筋線轉堺筋線｜約 20 分鐘｜¥290。",
-              },
-            },
-            {
-              type: "spot",
-              spot: {
-                no: "03",
                 name: "日本橋電電街(DenDen Town)",
-                time: "15:00–18:30",
+                time: "12:30–15:30",
                 desc: "大阪版秋葉原。必逛:Joshin 總本店、Animate 西日本最大級、駿河屋、Mandarake。可順道體驗女僕咖啡廳。",
                 meta: ["⏰ 多數 11:00–20:00", "⏱ 建議停留 3 小時"],
                 mapUrl:
@@ -207,7 +187,26 @@ export const okayamaKobeOsaka: Journey = {
             },
             {
               type: "transport",
-              note: { mode: "步行", text: "「日本橋電電街 → 道頓堀」｜約 10 分鐘｜免費。" },
+              note: {
+                mode: "地鐵",
+                text: "「日本橋駅 → 梅田站」｜堺筋線轉御堂筋線(本町站轉乘)｜約 20 分鐘｜¥290。",
+              },
+            },
+            {
+              type: "spot",
+              spot: {
+                no: "03",
+                name: "hololive 大阪梅田店(阪急三番街北館 B1F)",
+                time: "16:00–17:30",
+                desc: "關西第一家 hololive 官方實體店。單筆 ¥3,300 以上送特典明信片。店面不好找,建議用 Google Map 設「Kiddy Land 大阪梅田店」導航。",
+                meta: ["⏰ 10:00–21:00", "⏱ 建議停留 30–60 分", "💴 預算 ¥5,000–15,000"],
+                mapUrl:
+                  "https://www.google.com/maps/place/?q=place_id:ChIJFegzXQDnAGARVHywk-VqQe0",
+              },
+            },
+            {
+              type: "transport",
+              note: { mode: "地鐵", text: "「梅田站 → 難波站」｜御堂筋線直達｜約 10 分鐘｜¥280。" },
             },
           ],
         },
@@ -220,7 +219,7 @@ export const okayamaKobeOsaka: Journey = {
               spot: {
                 no: "04",
                 name: "道頓堀美食巡禮 + 心齋橋夜逛",
-                time: "19:00–22:00",
+                time: "18:00–22:00",
                 desc: "把昨天沒吃到的章魚燒、串炸、神戶牛壽司一次嘗試,逛完再到心齋橋藥妝補貨。",
                 meta: ["📸 戎橋夜景人少時更好拍"],
               },
@@ -233,9 +232,9 @@ export const okayamaKobeOsaka: Journey = {
           title: "Meals · 午晚餐推薦",
           restaurants: [
             {
-              name: "[午餐] 阪急三番街 UMEDA FOOD HALL",
-              desc: "就在 hololive 店樓上,B2F 美食街集結 50 家店。推薦神座拉麵或松屋牛丼。",
-              prices: ["¥1,000–1,500／人"],
+              name: "[午餐] 今井本店(難波)",
+              desc: "創業 60 多年的讚岐風烏龍麵老店,招牌きつねうどん甜鹹昆布湯頭迷人。從電電街步行約 10 分鐘即達,順路解決午餐。",
+              prices: ["¥1,200–1,800／人"],
             },
             {
               name: "[晚餐] 串カツ田中 道頓堀店",
@@ -755,15 +754,15 @@ export const okayamaKobeOsaka: Journey = {
   ],
   budget: [
     { date: "10/18 Day 1", transport: "¥14,500", tickets: "¥0", food: "¥5,000", lodging: "¥18,000", total: "¥37,500" },
-    { date: "10/19 Day 2", transport: "¥1,500", tickets: "¥1,200", food: "¥7,000", lodging: "¥18,000", total: "¥27,700" },
+    { date: "10/19 Day 2", transport: "¥1,800", tickets: "¥4,100", food: "¥7,000", lodging: "¥18,000", total: "¥30,900" },
     { date: "10/20 Day 3", transport: "¥3,600", tickets: "¥3,000", food: "¥7,500", lodging: "¥18,000", total: "¥32,100" },
     { date: "10/21 Day 4", transport: "¥2,500", tickets: "¥6,000", food: "¥20,000", lodging: "¥22,000", total: "¥50,500" },
     { date: "10/22 Day 5", transport: "¥9,000", tickets: "¥1,400", food: "¥6,000", lodging: "¥14,000", total: "¥30,400" },
     { date: "10/23 Day 6", transport: "¥2,300", tickets: "¥1,300", food: "¥4,000", lodging: "—", total: "¥7,600" },
-    { date: "合計", transport: "¥33,400", tickets: "¥12,900", food: "¥49,500", lodging: "¥90,000", total: "¥185,800", isTotal: true },
+    { date: "合計", transport: "¥33,700", tickets: "¥15,800", food: "¥49,500", lodging: "¥90,000", total: "¥189,000", isTotal: true },
   ],
   budgetNote:
-    "約合台幣 NT$ 41,400(2人合計)／每人 NT$ 20,700。匯率以 ¥1 ≈ NT$ 0.223 計算。未含機票、購物、周邊與伴手禮(建議再保留 NT$ 10,000–20,000／人)。",
+    "約合台幣 NT$ 42,100(2人合計)／每人 NT$ 21,050。匯率以 ¥1 ≈ NT$ 0.223 計算。未含機票、購物、周邊與伴手禮(建議再保留 NT$ 10,000–20,000／人)。",
   tips: [
     {
       title: "交通票券建議",
