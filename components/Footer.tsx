@@ -1,5 +1,3 @@
-import Link from "next/link";
-
 export default function Footer() {
   return (
     <footer className="mt-24 border-t border-[color:var(--sc-line)] bg-[color:var(--sc-cream-2)]">

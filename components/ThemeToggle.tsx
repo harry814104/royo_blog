@@ -3,23 +3,28 @@
 import { useEffect, useState } from "react";
 
 export default function ThemeToggle() {
-  const [dark, setDark] = useState(false);
-  const [ready, setReady] = useState(false);
+  const [dark, setDark] = useState<boolean | null>(null);
 
   useEffect(() => {
+    let cancelled = false;
     const root = document.documentElement;
     const resolve = () => {
       if (root.classList.contains("dark")) return true;
       if (root.classList.contains("light")) return false;
       return window.matchMedia("(prefers-color-scheme: dark)").matches;
     };
-    setDark(resolve());
-    setReady(true);
+    const frame = window.requestAnimationFrame(() => {
+      if (!cancelled) setDark(resolve());
+    });
+    return () => {
+      cancelled = true;
+      window.cancelAnimationFrame(frame);
+    };
   }, []);
 
   function toggle() {
     const root = document.documentElement;
-    const next = !dark;
+    const next = !(dark ?? false);
     root.classList.remove("dark", "light");
     root.classList.add(next ? "dark" : "light");
     try {
@@ -36,7 +41,7 @@ export default function ThemeToggle() {
       className="-mr-1.5 grid h-11 w-11 place-items-center rounded-full text-ink-soft transition-colors hover:bg-cream-2 hover:text-forest"
     >
       {/* 未掛載前保持空白,避免 hydration 不一致 */}
-      {ready && (dark ? <Sun /> : <Moon />)}
+      {dark !== null && (dark ? <Sun /> : <Moon />)}
     </button>
   );
 }
