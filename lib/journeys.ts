@@ -151,31 +151,11 @@ export function formatRange(j: Journey): string {
 // ── 資料 ───────────────────────────────────────────
 
 import { okayamaKobeOsaka } from "./data/okayama-kobe-osaka";
+import { nagoyaFukuoka } from "./data/nagoya-fukuoka";
 
 export const JOURNEYS: Journey[] = [
+  nagoyaFukuoka,
   okayamaKobeOsaka,
-  {
-    slug: "alishan-spring-2026",
-    name: "阿里山追日出",
-    place: "台灣 · 嘉義",
-    scope: "domestic",
-    startDate: "2026-09-12",
-    endDate: "2026-09-14",
-    tone: "forest",
-    excerpt: "搭第一班小火車上山,在雲海上面等太陽。",
-    tags: ["登山", "日出", "森林"],
-    days: [
-      {
-        day: 1,
-        title: "上山與神木群",
-        lodging: "阿里山賓館",
-        points: [
-          { name: "阿里山轉運站", lat: 23.5108, lng: 120.8025, kind: "transit" },
-          { name: "巨木群棧道", lat: 23.5118, lng: 120.7986, kind: "spot" },
-        ],
-      },
-    ],
-  },
   {
     slug: "kyoto-autumn-2025",
     name: "京都秋日散步",
