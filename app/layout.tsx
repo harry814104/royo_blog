@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Noto_Sans_TC, JetBrains_Mono } from "next/font/google";
+import { Noto_Sans_TC, JetBrains_Mono, Caveat } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Dock from "@/components/Dock";
@@ -18,6 +18,13 @@ const jetbrains = JetBrains_Mono({
   variable: "--font-jetbrains",
   subsets: ["latin"],
   weight: ["400", "500"],
+  display: "swap",
+});
+
+const caveat = Caveat({
+  variable: "--font-caveat",
+  subsets: ["latin"],
+  weight: ["600", "700"],
   display: "swap",
 });
 
@@ -42,7 +49,7 @@ export default function RootLayout({
     <html
       lang="zh-Hant"
       suppressHydrationWarning
-      className={`${notoTC.variable} ${jetbrains.variable} h-full antialiased`}
+      className={`${notoTC.variable} ${jetbrains.variable} ${caveat.variable} h-full antialiased`}
     >
       <head>
         <script dangerouslySetInnerHTML={{ __html: themeScript }} />
