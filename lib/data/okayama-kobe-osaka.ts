@@ -9,6 +9,7 @@ export const okayamaKobeOsaka: Journey = {
   startDate: "2026-10-18",
   endDate: "2026-10-23",
   tone: "deep",
+  cover: "/journey-okayama-kobe-osaka.png",
   excerpt: "文化探索 × 網美打卡 × 美食吃透透,從關西的繁華到山陽的靜謐。",
   tags: ["關西", "演唱會", "美食", "自由行"],
   highlights: [
@@ -24,9 +25,9 @@ export const okayamaKobeOsaka: Journey = {
       title: "抵達岡山,夜奔大阪心齋橋",
       summary:
         "傍晚降落桃太郎機場,搭巴士進岡山站,立刻轉新幹線殺到大阪。今晚先把心齋橋與道頓堀的夜色一次看夠。",
-      lodging: "Cross Hotel Osaka(心齋橋)",
+      lodging: "APA Hotel & Resort 大阪難波駅前タワー",
       route: {
-        stops: ["岡山桃太郎機場", "岡山駅", "新大阪駅", "飯店(心齋橋)", "心齋橋筋商店街", "道頓堀 Glico"],
+        stops: ["岡山桃太郎機場", "岡山駅", "新大阪駅", "飯店(難波)", "心齋橋筋商店街", "道頓堀 Glico"],
         mapUrl:
           "https://www.google.com/maps/dir/Okayama+Momotaro+Airport/Okayama+Station/Shin-Osaka+Station/Shinsaibashi-Suji+Shopping+Street/Dotonbori+Glico+Sign/",
       },
@@ -132,7 +133,7 @@ export const okayamaKobeOsaka: Journey = {
       title: "大阪海港 × 御宅天堂日",
       summary:
         "早上到天保山港灣村探訪大阪海遊館,中午殺到日本橋電電街當一日宅宅,下午轉戰梅田阪急三番街朝聖 hololive,晚上回道頓堀。",
-      lodging: "Cross Hotel Osaka(心齋橋)",
+      lodging: "APA Hotel & Resort 大阪難波駅前タワー",
       route: {
         stops: [
           "大阪海遊館 / 天保山",
@@ -274,7 +275,7 @@ export const okayamaKobeOsaka: Journey = {
       title: "奈良一日遊 · 神之鹿與千年古寺",
       summary:
         "從難波搭近鐵直達奈良,東大寺、奈良公園、春日大社三大景點一日制霸,傍晚回大阪改去梅田空中庭園展望台看夜景收尾。",
-      lodging: "Cross Hotel Osaka(心齋橋)",
+      lodging: "APA Hotel & Resort 大阪難波駅前タワー",
       route: {
         stops: ["大阪難波", "近鐵奈良駅", "奈良公園", "東大寺", "春日大社", "梅田スカイビル"],
         mapUrl:
@@ -408,7 +409,7 @@ export const okayamaKobeOsaka: Journey = {
       title: "神戶港 × 北野異人館 × GLION ARENA 演唱會",
       summary:
         "為晚上 19:00 演唱會空出充裕緩衝。上午退房寄行李,下午輕逛北野異人館與南京町,傍晚 17:00 前抵 GLION ARENA。",
-      lodging: "Hotel La'gent Stay Kobe Hyogo(三宮)",
+      lodging: "神戶三宮酒店(三宮 · Chuo-ku Edomachi 92)",
       route: {
         stops: ["三宮駅", "北野異人館街", "南京町中華街", "GLION ARENA KOBE"],
         mapUrl:
@@ -551,7 +552,7 @@ export const okayamaKobeOsaka: Journey = {
       title: "神戶 → 倉敷美觀 → 岡山",
       summary:
         "演唱會隔天輕鬆移動。上午搭新幹線到岡山,先到倉敷美觀漫步白壁老街 + 乘船遊運河,傍晚回岡山入住。",
-      lodging: "岡山駅前大和 ROYNET 飯店",
+      lodging: "ura アオトハル(岡山)",
       route: {
         stops: ["新神戶駅", "岡山駅", "倉敷美觀地區", "岡山駅 AEON Mall"],
         mapUrl:
@@ -760,21 +761,21 @@ export const okayamaKobeOsaka: Journey = {
   hotels: [
     {
       area: "大阪 · Day 1–3 三晚",
-      name: "Cross Hotel Osaka 大阪十字飯店",
-      meta: ["💰 ¥18,000／晚(雙人)", "📍 心齋橋站 步行 3 分", "⭐ 4.3／5.0"],
-      desc: "就在心齋橋商店街正中央,下樓就是道頓堀。日式禪風設計,公共浴池可放鬆,早餐有大阪燒現做。離兩條地鐵都近。",
+      name: "APA Hotel & Resort 大阪難波駅前タワー",
+      meta: ["💰 ¥18,000／晚(雙人)", "📍 難波駅 步行 3 分", "🛁 頂樓大浴場 + 露天風呂"],
+      desc: "APA 旗下大型 Resort 塔樓,就在難波駅前,御堂筋線、近鐵、南海電車匯集,往返心齋橋與道頓堀步行可達。頂樓有大浴場與露天風呂,逛累泡湯最舒服。三晚都住這,行李不用搬來搬去。",
     },
     {
       area: "神戶 · Day 4 一晚",
-      name: "Hotel La'gent Stay Kobe Hyogo",
-      meta: ["💰 ¥22,000／晚(雙人)", "📍 三宮駅 步行 5 分", "⭐ 4.4／5.0"],
-      desc: "三宮車站附近新穎飯店,走到 GLION ARENA 約 20 分(巴士 5 分)。樓層高可俯瞰神戶港夜景,附大浴場與三溫暖。",
+      name: "神戶三宮酒店(Kobe Sannomiya Hotel)",
+      meta: ["💰 ¥22,000／晚(雙人)", "📍 神戶市中央區江戶町 92", "🚶 三宮駅徒步圈"],
+      desc: "位在三宮市中心江戶町(Chuo-ku Edomachi 92),靠近三宮車站與舊居留地,逛北野異人館、南京町與前往 GLION ARENA 都方便。演唱會散場後走回飯店最省心。",
     },
     {
       area: "岡山 · Day 5 一晚",
-      name: "岡山駅前大和 ROYNET 飯店",
-      meta: ["💰 ¥14,000／晚(雙人)", "📍 岡山駅 步行 3 分", "⭐ 4.3／5.0"],
-      desc: "最後一晚住岡山駅前最方便,隔天搭機場巴士只要走 3 分。附近超商、AEON Mall 步行可達,早餐有岡山在地料理。",
+      name: "ura アオトハル",
+      meta: ["💰 ¥14,000／晚(雙人)", "📍 岡山市區", "🏠 在地風格住宿"],
+      desc: "岡山在地風格的小型住宿,適合演唱會隔天放鬆過夜。回程當天就近整理行李、採買伴手禮,再從岡山駅搭機場巴士賦歸。",
     },
   ],
   budget: [
