@@ -152,10 +152,12 @@ export function formatRange(j: Journey): string {
 
 import { okayamaKobeOsaka } from "./data/okayama-kobe-osaka";
 import { nagoyaFukuoka } from "./data/nagoya-fukuoka";
+import { yokohamaTokyo } from "./data/yokohama-tokyo";
 
 export const JOURNEYS: Journey[] = [
   nagoyaFukuoka,
   okayamaKobeOsaka,
+  yokohamaTokyo,
   {
     slug: "kyoto-autumn-2025",
     name: "京都秋日散步",
