@@ -90,6 +90,8 @@ export interface BudgetRow {
 export interface Tip {
   title: string;
   body: string;
+  steps?: string[];
+  links?: Array<{ label: string; href: string }>;
 }
 
 export interface Journey {

@@ -713,6 +713,28 @@ function InfoSection({ journey }: { journey: Journey }) {
                   <h3 className="text-base font-medium">{t.title}</h3>
                 </div>
                 <p className="mt-3 text-sm leading-7 text-ink-soft">{t.body}</p>
+                {t.steps && t.steps.length > 0 && (
+                  <ol className="mt-3 list-decimal space-y-2 pl-5 text-sm leading-7 text-ink-soft">
+                    {t.steps.map((step) => (
+                      <li key={step}>{step}</li>
+                    ))}
+                  </ol>
+                )}
+                {t.links && t.links.length > 0 && (
+                  <div className="mt-4 flex flex-wrap gap-x-4 gap-y-2 text-xs">
+                    {t.links.map((link) => (
+                      <a
+                        key={link.href}
+                        href={link.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-forest underline underline-offset-4 hover:text-wood-dark"
+                      >
+                        {link.label} ↗
+                      </a>
+                    ))}
+                  </div>
+                )}
               </div>
             ))}
           </div>
