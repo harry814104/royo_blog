@@ -24,15 +24,16 @@ export const nagoyaFukuoka: Journey = {
       day: 1,
       date: "2026.11.06 · 五",
       title: "抵達名古屋 · 味噌豬排與手羽先",
-      summary: "抵達名古屋後先入住、吃味噌豬排或手羽先,晚上以養精蓄銳為主。確認三場演唱會的電子票券、入場資訊與手機電量;首日機票時間沿用原規劃,以實際訂位為準。",
-      lodging: "名古屋飯店（名稱、地址待補）",
+      summary: "抵達名古屋後前往丸之內的 TIC HOTEL Marunouchisakae 入住,附近吃味噌豬排或手羽先,晚上養精蓄銳。確認三場演唱會的電子票券、入場資訊與手機電量;首日機票時間沿用原規劃,以實際訂位為準。",
+      lodging: "TIC HOTEL Marunouchisakae（丸之內）",
       route: {
-        stops: ["中部國際機場", "名鐵名古屋站", "名古屋飯店", "味噌豬排 / 手羽先"],
-        mapUrl: "https://www.google.com/maps/dir/%E4%B8%AD%E9%83%A8%E5%9B%BD%E9%9A%9B%E7%A9%BA%E6%B8%AF/%E5%90%8D%E9%89%84%E5%90%8D%E5%8F%A4%E5%B1%8B%E9%A7%85/",
+        stops: ["中部國際機場", "名鐵名古屋站", "地下鐵櫻通線", "丸之內站", "TIC HOTEL Marunouchisakae", "晚餐"],
+        mapUrl: "https://www.google.com/maps/dir/%E4%B8%AD%E9%83%A8%E5%9B%BD%E9%9A%9B%E7%A9%BA%E6%B8%AF/%E5%90%8D%E9%89%84%E5%90%8D%E5%8F%A4%E5%B1%8B%E9%A7%85/%E4%B8%B8%E3%81%AE%E5%86%85%E9%A7%85%20%E5%90%8D%E5%8F%A4%E5%B1%8B/TIC%20HOTEL%20Marunouchisakae%20%E5%90%8D%E5%8F%A4%E5%B1%8B%E5%B8%82%E4%B8%AD%E5%8C%BA%E4%B8%B8%E3%81%AE%E5%86%852-15-19/",
       },
       points: [
         { name: "中部國際機場 T1", lat: 34.8584, lng: 136.8051, kind: "transit" },
         { name: "名古屋站", lat: 35.1709, lng: 136.8815, kind: "transit" },
+        { name: "TIC HOTEL Marunouchisakae", lat: 35.174221, lng: 136.89888, kind: "stay" },
       ],
       blocks: [
         {
@@ -52,17 +53,18 @@ export const nagoyaFukuoka: Journey = {
             {
               type: "transport",
               note: {
-                mode: "名鐵電車 → 名古屋市區",
-                text: "中部國際空港站 → 名鐵名古屋站,μSKY 最快約 28 分鐘,另留購票與候車時間。搭 μSKY 需基本車票加 μticket;一般特急的普通車依車廂規定乘車。到名古屋站後,站前飯店可步行;若住榮區,再轉地下鐵東山線往藤が丘方向至榮站。飯店名稱待補,末段步行路線再依地址確認。",
+                mode: "名鐵 → 櫻通線 → 丸之內",
+                text: "中部國際空港站搭名鐵到名鐵名古屋站,μSKY 最快約28分鐘,需基本車票加 μticket。抵達後依「地下鉄 桜通線」指標轉乘往德重（徳重）方向,經國際中心、丸之內兩站下車。依電梯指標上地面後,導航丸の内2-15-19,步行與找路預留約5–10分鐘。出關後到民宿,連同候車、站內轉乘與拖行李抓60–90分鐘。",
               },
             },
             {
               type: "spot",
               spot: {
-                name: "名古屋飯店 Check-in · 晚餐",
+                name: "TIC HOTEL Marunouchisakae · Check-in",
                 time: "約 19:00–20:00 入住",
-                desc: "先放行李,附近吃味噌豬排或手羽先。今晚不趕景點,睡前將電子票、護照與行動電源整理好。",
+                desc: "住宿地址:愛知縣名古屋市中區丸の内2-15-19。依訂房通知確認樓層、門禁與入住方式;住宿頁列16:00–23:00入住、10:00前退房,實際以訂房單為準。先放行李再就近吃晚餐,睡前整理電子票、護照與行動電源。",
                 no: "02",
+                mapUrl: "https://www.google.com/maps/search/?api=1&query=TIC%20HOTEL%20Marunouchisakae%20%E5%90%8D%E5%8F%A4%E5%B1%8B%E5%B8%82%E4%B8%AD%E5%8C%BA%E4%B8%B8%E3%81%AE%E5%86%852-15-19",
               },
             },
           ],
@@ -91,12 +93,13 @@ export const nagoyaFukuoka: Journey = {
       date: "2026.11.07 · 六 · 星街彗星演唱會",
       title: "名古屋城 · 金鯱橫丁 · 星街彗星 LIVE",
       summary: "上午名古屋城與金鯱橫丁午餐,下午直接移動到名城公園旁 IG Arena,留時間買周邊與入場。18:00 星街彗星名古屋演唱會,散場後回市區吃宵夜。",
-      lodging: "名古屋飯店（名稱、地址待補）",
+      lodging: "TIC HOTEL Marunouchisakae（丸之內）",
       route: {
-        stops: ["名古屋城", "金鯱橫丁", "IG Arena（名城公園）", "市區宵夜"],
-        mapUrl: "https://www.google.com/maps/dir/%E5%90%8D%E5%8F%A4%E5%B1%8B%E5%9F%8E/%E9%87%91%E3%82%B7%E3%83%A3%E3%83%81%E6%A8%AA%E4%B8%81/IG%E3%82%A2%E3%83%AA%E3%83%BC%E3%83%8A/",
+        stops: ["TIC HOTEL Marunouchisakae", "名古屋城", "金鯱橫丁", "IG Arena（名城公園）", "市區宵夜"],
+        mapUrl: "https://www.google.com/maps/dir/TIC%20HOTEL%20Marunouchisakae%20%E5%90%8D%E5%8F%A4%E5%B1%8B%E5%B8%82%E4%B8%AD%E5%8C%BA%E4%B8%B8%E3%81%AE%E5%86%852-15-19/%E5%90%8D%E5%8F%A4%E5%B1%8B%E5%9F%8E/%E9%87%91%E3%82%B7%E3%83%A3%E3%83%81%E6%A8%AA%E4%B8%81/IG%E3%82%A2%E3%83%AA%E3%83%BC%E3%83%8A/",
       },
       points: [
+        { name: "TIC HOTEL Marunouchisakae", lat: 35.174221, lng: 136.89888, kind: "stay" },
         { name: "名古屋城", lat: 35.1856, lng: 136.8997, kind: "spot" },
         { name: "金鯱橫丁", lat: 35.1837, lng: 136.8991, kind: "food" },
         { name: "IG Arena", lat: 35.1904454, lng: 136.9026725, kind: "spot" },
@@ -181,15 +184,16 @@ export const nagoyaFukuoka: Journey = {
       date: "2026.11.08 · 日 · YOASOBI 演唱會",
       title: "巨蛋前 AEON · YOASOBI 名古屋 LIVE",
       summary: "上午到午後在 AEON MALL NAGOYA DOME MAE 吃午餐、喝咖啡與休息。14:30 走連接空橋前往名古屋巨蛋,18:00 看 YOASOBI。散場後可步行到大曽根站搭 JR,避開巨蛋前車站的人潮。",
-      lodging: "名古屋飯店（名稱、地址待補）",
+      lodging: "TIC HOTEL Marunouchisakae（丸之內）",
       route: {
-        stops: ["AEON MALL NAGOYA DOME MAE", "連接空橋", "名古屋巨蛋", "大曽根站", "名古屋飯店"],
-        mapUrl: "https://www.google.com/maps/dir/%E3%82%A4%E3%82%AA%E3%83%B3%E3%83%A2%E3%83%BC%E3%83%AB%E3%83%8A%E3%82%B4%E3%83%A4%E3%83%89%E3%83%BC%E3%83%A0%E5%89%8D/%E3%83%90%E3%83%B3%E3%83%86%E3%83%AA%E3%83%B3%E3%83%89%E3%83%BC%E3%83%A0%20%E3%83%8A%E3%82%B4%E3%83%A4/%E5%A4%A7%E6%9B%BD%E6%A0%B9%E9%A7%85/",
+        stops: ["AEON MALL NAGOYA DOME MAE", "連接空橋", "名古屋巨蛋", "大曽根站", "名古屋站 → 丸之內站", "TIC HOTEL Marunouchisakae"],
+        mapUrl: "https://www.google.com/maps/dir/%E3%82%A4%E3%82%AA%E3%83%B3%E3%83%A2%E3%83%BC%E3%83%AB%E3%83%8A%E3%82%B4%E3%83%A4%E3%83%89%E3%83%BC%E3%83%A0%E5%89%8D/%E3%83%90%E3%83%B3%E3%83%86%E3%83%AA%E3%83%B3%E3%83%89%E3%83%BC%E3%83%A0%20%E3%83%8A%E3%82%B4%E3%83%A4/%E5%A4%A7%E6%9B%BD%E6%A0%B9%E9%A7%85/%E5%90%8D%E5%8F%A4%E5%B1%8B%E9%A7%85/TIC%20HOTEL%20Marunouchisakae%20%E5%90%8D%E5%8F%A4%E5%B1%8B%E5%B8%82%E4%B8%AD%E5%8C%BA%E4%B8%B8%E3%81%AE%E5%86%852-15-19/",
       },
       points: [
         { name: "AEON MALL NAGOYA DOME MAE", lat: 35.1875934, lng: 136.9458568, kind: "spot" },
         { name: "名古屋巨蛋", lat: 35.1859965, lng: 136.9473974, kind: "spot" },
         { name: "大曽根站", lat: 35.1907, lng: 136.9367, kind: "transit" },
+        { name: "TIC HOTEL Marunouchisakae", lat: 35.174221, lng: 136.89888, kind: "stay" },
       ],
       blocks: [
         {
@@ -248,7 +252,10 @@ export const nagoyaFukuoka: Journey = {
             },
             {
               type: "transport",
-              note: { mode: "散場步行 → JR", text: "巨蛋 → 大曽根站 → JR 中央本線往名古屋方向。步行與散場管制另留緩衝,搭車前再看當晚末班車。" },
+              note: {
+                mode: "散場步行 → JR",
+                text: "巨蛋 → 大曽根站 → JR中央本線往名古屋方向,到名古屋後轉櫻通線往德重方向,兩站到丸之內再步行回 TIC HOTEL。步行、散場管制與轉乘另留緩衝,搭車前看當晚末班車。",
+              },
             },
           ],
         },
@@ -267,17 +274,18 @@ export const nagoyaFukuoka: Journey = {
       day: 4,
       date: "2026.11.09 · 一 · 大須深逛日",
       title: "則武之森周邊 · 書牆 · 大須深逛",
-      summary: "上午則武之森周邊散步,接 AEON MALL Nagoya Noritake Garden 書牆打卡與午餐。13:30 起專心逛大須的古著、藥妝與動漫電器,一路逛到晚餐,最後經伏見回飯店。週一則武之森館舍休館,上午以外觀散步及商場為主。",
-      lodging: "名古屋飯店（名稱、地址待補）",
+      summary: "上午則武之森周邊散步,接 AEON MALL Nagoya Noritake Garden 書牆打卡與午餐。13:30 起專心逛大須的古著、藥妝與動漫電器,一路逛到晚餐,最後經伏見、丸之內回 TIC HOTEL。週一則武之森館舍休館,上午以外觀散步及商場為主。",
+      lodging: "TIC HOTEL Marunouchisakae（丸之內）",
       route: {
-        stops: ["則武之森周邊", "AEON MALL Nagoya Noritake Garden", "大須商店街", "大須觀音", "伏見", "名古屋飯店"],
-        mapUrl: "https://www.google.com/maps/dir/%E3%83%8E%E3%83%AA%E3%82%BF%E3%82%B1%E3%81%AE%E6%A3%AE/%E3%82%A4%E3%82%AA%E3%83%B3%E3%83%A2%E3%83%BC%E3%83%AB%20Nagoya%20Noritake%20Garden/%E5%A4%A7%E9%A0%88%E5%95%86%E5%BA%97%E8%A1%97/%E5%A4%A7%E9%A0%88%E8%A6%B3%E9%9F%B3/%E4%BC%8F%E8%A6%8B%E9%A7%85/",
+        stops: ["則武之森周邊", "AEON MALL Nagoya Noritake Garden", "大須商店街", "大須觀音", "伏見", "丸之內站", "TIC HOTEL Marunouchisakae"],
+        mapUrl: "https://www.google.com/maps/dir/%E3%83%8E%E3%83%AA%E3%82%BF%E3%82%B1%E3%81%AE%E6%A3%AE/%E3%82%A4%E3%82%AA%E3%83%B3%E3%83%A2%E3%83%BC%E3%83%AB%20Nagoya%20Noritake%20Garden/%E5%A4%A7%E9%A0%88%E5%95%86%E5%BA%97%E8%A1%97/%E5%A4%A7%E9%A0%88%E8%A6%B3%E9%9F%B3/%E4%BC%8F%E8%A6%8B%E9%A7%85/%E4%B8%B8%E3%81%AE%E5%86%85%E9%A7%85%20%E5%90%8D%E5%8F%A4%E5%B1%8B/TIC%20HOTEL%20Marunouchisakae%20%E5%90%8D%E5%8F%A4%E5%B1%8B%E5%B8%82%E4%B8%AD%E5%8C%BA%E4%B8%B8%E3%81%AE%E5%86%852-15-19/",
       },
       points: [
         { name: "則武之森", lat: 35.1794891, lng: 136.881293, kind: "spot" },
         { name: "AEON MALL Nagoya Noritake Garden", lat: 35.1799, lng: 136.8799, kind: "spot" },
         { name: "大須商店街 / 大須觀音", lat: 35.1595, lng: 136.8995, kind: "spot" },
         { name: "伏見站", lat: 35.1693, lng: 136.8975, kind: "transit" },
+        { name: "TIC HOTEL Marunouchisakae", lat: 35.174221, lng: 136.89888, kind: "stay" },
       ],
       blocks: [
         {
@@ -354,7 +362,10 @@ export const nagoyaFukuoka: Journey = {
             },
             {
               type: "transport",
-              note: { mode: "大須觀音 → 伏見 → 飯店", text: "吃完晚餐往伏見方向收尾,再依名古屋飯店位置轉乘或步行。今天的採買集中完成,隔天名站只作最後補貨。" },
+              note: {
+                mode: "大須觀音 → 伏見 → 丸之內 → TIC HOTEL",
+                text: "吃完晚餐經伏見收尾,搭鶴舞線往上小田井方向,從伏見一站到丸之內,再步行回 TIC HOTEL。也可由伏見依導航步行回民宿,視當晚體力選擇。",
+              },
             },
           ],
         },
@@ -373,13 +384,14 @@ export const nagoyaFukuoka: Journey = {
       day: 5,
       date: "2026.11.10 · 二 · 捷星移動日",
       title: "名站鰻魚飯 · 採買 · 捷星飛福岡",
-      summary: "11:00 退房寄行李,名古屋站吃鰻魚飯（まるや／備長）,下午名站商圈採買。17:00 左右搭名鐵到中部機場 T1,19:30 捷星起飛、21:05 左右抵福岡;領行李後搭地鐵到博多,從筑紫口步行入住 TABIGOYA。",
+      summary: "TIC HOTEL 住宿頁列10:00前退房（訂房單另約則依訂房單）,退房後搭櫻通線到名古屋站寄行李,再吃鰻魚飯（まるや／備長）與名站採買。16:00起取行李,17:00左右搭名鐵到中部機場T1,19:30捷星起飛、21:05左右抵福岡,再搭地鐵到博多入住TABIGOYA。",
       lodging: "TABIGOYA LIFE＆TRIP HAKATA EAST（博多站筑紫口）",
       route: {
-        stops: ["名古屋飯店退房", "名古屋站鰻魚飯", "名站採買 / 取行李", "中部國際機場 T1", "福岡機場國內線", "博多站筑紫口", "TABIGOYA"],
-        mapUrl: "https://www.google.com/maps/dir/%E5%90%8D%E9%89%84%E5%90%8D%E5%8F%A4%E5%B1%8B%E9%A7%85/%E4%B8%AD%E9%83%A8%E5%9B%BD%E9%9A%9B%E7%A9%BA%E6%B8%AF/",
+        stops: ["TIC HOTEL 退房", "丸之內 → 名古屋站寄行李", "名古屋站鰻魚飯", "名站採買 / 取行李", "中部國際機場 T1", "福岡機場國內線", "博多站筑紫口", "TABIGOYA"],
+        mapUrl: "https://www.google.com/maps/dir/TIC%20HOTEL%20Marunouchisakae%20%E5%90%8D%E5%8F%A4%E5%B1%8B%E5%B8%82%E4%B8%AD%E5%8C%BA%E4%B8%B8%E3%81%AE%E5%86%852-15-19/%E4%B8%B8%E3%81%AE%E5%86%85%E9%A7%85%20%E5%90%8D%E5%8F%A4%E5%B1%8B/%E5%90%8D%E5%8F%A4%E5%B1%8B%E9%A7%85/%E4%B8%AD%E9%83%A8%E5%9B%BD%E9%9A%9B%E7%A9%BA%E6%B8%AF/",
       },
       points: [
+        { name: "TIC HOTEL Marunouchisakae", lat: 35.174221, lng: 136.89888, kind: "stay" },
         { name: "名古屋站", lat: 35.1709, lng: 136.8815, kind: "transit" },
         { name: "中部國際機場 T1", lat: 34.8584, lng: 136.8051, kind: "transit" },
         { name: "福岡機場國內線", lat: 33.5986, lng: 130.4485, kind: "transit" },
@@ -394,10 +406,11 @@ export const nagoyaFukuoka: Journey = {
             {
               type: "spot",
               spot: {
-                name: "名古屋飯店退房 · 寄行李",
-                time: "11:00",
-                desc: "依訂房退房時間辦理。飯店若可寄放就先寄放;若無寄放服務,改用名古屋站置物櫃。下午取行李的時間一起算進去。",
+                name: "TIC HOTEL 退房 · 名古屋站寄行李",
+                time: "10:00 前（依訂房單）",
+                desc: "住宿頁列10:00前退房,若你的訂房單另有約定則以訂房單為準。民宿寄放服務未確認,建議退房後帶行李步行至丸之內站,搭櫻通線往太閤通方向,經國際中心到名古屋站下車,使用站內置物櫃或寄放服務。記下櫃位與取件方式,下午採買完直接取行李往機場。",
                 no: "01",
+                mapUrl: "https://www.google.com/maps/search/?api=1&query=TIC%20HOTEL%20Marunouchisakae%20%E5%90%8D%E5%8F%A4%E5%B1%8B%E5%B8%82%E4%B8%AD%E5%8C%BA%E4%B8%B8%E3%81%AE%E5%86%852-15-19",
               },
             },
             {
@@ -429,9 +442,9 @@ export const nagoyaFukuoka: Journey = {
             {
               type: "spot",
               spot: {
-                name: "取行李 · 前往名鐵名古屋站",
+                name: "名古屋站取行李 · 前往名鐵站",
                 time: "16:00–16:40（預留）",
-                desc: "飯店寄放者先回飯店領行李;若飯店離名站較遠,再提早結束採買。目標 16:40 前到名鐵站購票與找月台。",
+                desc: "在名古屋站取回早上寄放的行李,再走到名鐵名古屋站。16:00起保留取件、步行與購票時間,目標16:40前到名鐵站找月台,17:00左右搭車赴機場。",
                 mapUrl: "https://www.google.com/maps/search/?api=1&query=%E5%90%8D%E9%89%84%E5%90%8D%E5%8F%A4%E5%B1%8B%E9%A7%85",
                 no: "04",
               },
@@ -901,9 +914,9 @@ export const nagoyaFukuoka: Journey = {
   hotels: [
     {
       area: "名古屋 · Day 1–4 四晚（11/06 入住、11/10 退房）",
-      name: "名古屋飯店（名稱、地址待補）",
-      meta: ["🛏 四晚", "🚆 11/10 由名站搭名鐵赴機場", "🧳 退房後確認寄放方式"],
-      desc: "名古屋飯店名稱與地址待補,目前先列中部機場到名古屋站的共用動線;若住榮區,再轉地下鐵東山線到榮站。末段出口、步行與 11/10 領行李所需時間,待飯店地址補齊後確認。",
+      name: "TIC HOTEL Marunouchisakae",
+      meta: ["📍 愛知縣名古屋市中區丸の内2-15-19", "🚇 丸之內站（櫻通線 / 鶴舞線）", "🛏 住宿頁列16:00–23:00入住 / 10:00前退房,依訂房單"],
+      desc: "11/6入住、11/10退房,共四晚。從名古屋站搭櫻通線往德重方向,經國際中心、丸之內兩站下車,上地面後步行與找路抓5–10分鐘。依訂房通知確認門禁、樓層與入住方式。11/10建議退房後直接帶行李到名古屋站寄放,名站採買完取件搭名鐵赴機場。",
     },
     {
       area: "福岡 · Day 5–8 四晚（11/10 晚入住、11/14 退房）",
@@ -963,23 +976,31 @@ export const nagoyaFukuoka: Journey = {
   budgetNote: "每人當地支出暫估 ¥85,450,住宿仍以三人分攤的預算抓法計算,不是已訂房價。交通僅含地面交通,不含來回台日機票與 11/10 捷星機票;三場演唱會門票、購物、伴手禮與退稅手續費另計。11/11 世解以預售成人 ¥1,800 估算,當日票 ¥2,300;11/13 teamLab 以 ¥2,400 起加福岡塔 ¥1,000 估算,依實際票種調整。2026/11 新制購物先付含稅價,未扣除尚未入帳的退稅。",
   tips: [
     {
-      title: "11/6 中部機場 → 名古屋飯店",
-      body: "名古屋飯店地址待補,先提供到名古屋站的完整共用段;榮區與站前飯店的末段分開看。",
+      title: "11/6 中部機場 → TIC HOTEL 丸之內",
+      body: "TIC HOTEL Marunouchisakae,地址:愛知縣名古屋市中區丸の内2-15-19。到名古屋站後改轉櫻通線至丸之內,全段依民宿位置安排。",
       steps: [
-        "入境領行李後,跟著 Access Plaza／名鉄電車指標到中部國際空港站。若抵達T2,先依機場指標往車站與 Access Plaza。",
-        "搭往名鐵名古屋方向的電車。μSKY 最快約28分鐘,需基本車票加 μticket;購票時確認目的地、車廂與月台。",
-        "站前飯店:到名鐵名古屋後依飯店地址步行。榮區飯店:轉地下鐵東山線往藤が丘方向,在榮下車後再步行。",
-        "把通關、候車、轉乘與拖行李都算進去,入住時間抓彈性;末段出口待飯店地址確認。",
+        "入境領行李後,依 Access Plaza／名鉄電車指標到中部國際空港站;若抵達T2,先依機場指標往車站。",
+        "搭名鐵到名鐵名古屋站。μSKY最快約28分鐘,需基本車票加 μticket;另留購票、候車與車廂確認時間。",
+        "在名古屋站跟著「地下鉄 桜通線」轉乘往德重（徳重）方向,經國際中心、丸之內兩站下車。",
+        "依電梯指標上地面後,導航丸の内2-15-19,步行與找路抓5–10分鐘。拖行李時優先走電梯動線,出關後到民宿合計抓60–90分鐘。",
+        "依訂房通知確認入住方式;住宿頁列16:00–23:00入住、10:00前退房,實際以訂房單為準。",
       ],
       links: [
         { label: "中部機場・名鐵交通", href: "https://www.centrair.jp/access/train.html" },
+        { label: "名古屋市交通局・櫻通線站序", href: "https://map.kotsu.city.nagoya.jp/rp/subway/TRP0000191.htm" },
+        {
+          label: "TIC HOTEL・地址導航",
+          href: "https://www.google.com/maps/search/?api=1&query=TIC%20HOTEL%20Marunouchisakae%20%E5%90%8D%E5%8F%A4%E5%B1%8B%E5%B8%82%E4%B8%AD%E5%8C%BA%E4%B8%B8%E3%81%AE%E5%86%852-15-19",
+        },
+        { label: "TIC HOTEL・住宿資訊與退房時間", href: "https://www.booking.com/hotel/jp/tic-marunouchisakae.ja.html" },
       ],
     },
     {
-      title: "11/10 名古屋 → 中部機場 · 捷星 T1",
-      body: "依你的行程17:00左右搭名鐵,19:30起飛。捷星在2026/3/17已改到第1航廈,不再沿用舊的T2指引。",
+      title: "11/10 TIC HOTEL → 名站寄行李 → 中部機場",
+      body: "TIC HOTEL退房後先把行李帶到名古屋站寄放,午餐、採買與搭機集中在名站。保留17:00左右名鐵、19:30捷星的原安排。",
       steps: [
-        "16:00前結束採買並取行李,目標16:40前到名鐵名古屋站購票、找月台;飯店離名站遠就再提前。",
+        "按住宿頁先以10:00前退房規劃（訂房單另約則依訂房單）。步行到丸之內站,搭櫻通線往太閤通方向,經國際中心、名古屋兩站下車,在站內寄行李並保存取件資訊。",
+        "名站午餐與採買後,16:00起取回行李、步行往名鐵名古屋站,目標16:40前到站購票找月台。",
         "17:00左右搭往中部國際空港的名鐵電車,下車經 Access Plaza 往T1 3F O櫃檯,目標17:30–17:50到達。",
         "按捷星GK國內線一般規則,報到與託運最晚出發前30分鐘完成;本班即19:00。建議18:30前過安檢、19:00前到登機門,當日通知優先。",
         "名古屋→福岡是國內線。名古屋買的退稅商品一起帶往福岡,11/14離境再作海關確認。",
@@ -988,6 +1009,11 @@ export const nagoyaFukuoka: Journey = {
         { label: "中部機場・名鐵交通", href: "https://www.centrair.jp/access/train.html" },
         { label: "捷星・中部機場 T1 O 櫃檯", href: "https://www.centrair.jp/flight/airline/jetstar.html" },
         { label: "捷星・報到與登機時間", href: "https://www.jetstar.com/jp/ja/help/when-do-i-need-to-get-to-the-airport" },
+        { label: "名古屋市交通局・櫻通線站序", href: "https://map.kotsu.city.nagoya.jp/rp/subway/TRP0000191.htm" },
+        {
+          label: "TIC HOTEL・地址導航",
+          href: "https://www.google.com/maps/search/?api=1&query=TIC%20HOTEL%20Marunouchisakae%20%E5%90%8D%E5%8F%A4%E5%B1%8B%E5%B8%82%E4%B8%AD%E5%8C%BA%E4%B8%B8%E3%81%AE%E5%86%852-15-19",
+        },
       ],
     },
     {
